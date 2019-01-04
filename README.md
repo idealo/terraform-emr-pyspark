@@ -4,7 +4,7 @@ This code should help to jump start PySpark with Anaconda on AWS using Terraform
 
 ## Getting Started
 1. Install Terraform on Mac: `brew install terraform`
-2. Adjust the scripts (`bootstrap_actions.sh` and `pyspark_quick_setup.sh`) in `modules/s3/scripts`
+2. Adjust the scripts (`bootstrap_actions.sh` and `pyspark_quick_setup.sh`) in `scripts` if necessary
 3. Set parameters in `terraform.tfvars`
 4. Start cluster:
 ```

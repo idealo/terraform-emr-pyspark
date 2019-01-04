@@ -8,9 +8,10 @@ module "iam" {
 }
 
 module "security" {
-  source = "./modules/security"
-  name   = "${var.name}"
-  vpc_id = "${var.vpc_id}"
+  source              = "./modules/security"
+  name                = "${var.name}"
+  vpc_id              = "${var.vpc_id}"
+  ingress_cidr_blocks = "${var.ingress_cidr_blocks}"
 }
 
 module "emr" {

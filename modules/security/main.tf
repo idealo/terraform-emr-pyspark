@@ -8,28 +8,28 @@ resource "aws_security_group" "emr_master" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["${var.ingress_cidr_blocks}"]
   }
 
   ingress {
     from_port   = 4040
     to_port     = 4040
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["${var.ingress_cidr_blocks}"]
   }
 
   ingress {
     from_port   = 8888
     to_port     = 8888
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["${var.ingress_cidr_blocks}"]
   }
 
   ingress {
     from_port   = 20888
     to_port     = 20888
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["${var.ingress_cidr_blocks}"]
   }
 
   egress {
@@ -54,7 +54,7 @@ resource "aws_security_group" "emr_slave" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["${var.ingress_cidr_blocks}"]
   }
 
   egress {

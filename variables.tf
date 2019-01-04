@@ -12,3 +12,4 @@ variable "master_ebs_size" {}
 variable "core_instance_type" {}
 variable "core_instance_count" {}
 variable "core_ebs_size" {}
+variable "ingress_cidr_blocks" {}
