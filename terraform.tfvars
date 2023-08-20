@@ -4,7 +4,7 @@ region              = "eu-central-1"
 subnet_id           = "<subet_id>"
 vpc_id              = "<vpc_id>"
 key_name            = "<key_name>"
-ingress_cidr_blocks = ["146.70.143.84/32"]
+ingress_cidr_blocks = ["0.0.0.0/0"]
 release_label       = "emr-6.12.0"
 applications        = ["Hadoop", "Spark"]
 
