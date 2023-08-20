@@ -3,11 +3,17 @@ terraform {
     encrypt = true
     bucket  = "terraform-persistence"
     key     = "terraform-emr-pyspark.tfstate"
-    region  = "eu-central-1"
+    region  = "us-west-2"
+  }
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
   }
 }
 
 provider "aws" {
-  version    = "~> 1.0"
-  region     = "${var.region}"
+  region = var.region
 }
